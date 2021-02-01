@@ -16,5 +16,4 @@ public class Library {
                 .filter(e -> e.getAuthor().equals(author))
                 .collect(Collectors.toList());
     }
-
 }
