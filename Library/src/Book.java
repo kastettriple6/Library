@@ -7,10 +7,6 @@ public class Book extends Library{
     public String author;
     public LocalDate year = LocalDate.now();
 
-    public String toString(){
-        this.year = year;
-        return String.valueOf(year);
-    }
     public String getTitle() {
         return title;
     }
@@ -27,7 +23,19 @@ public class Book extends Library{
         this.author = author;
     }
 
-    public Book(String title, String author, LocalDate year){
+    public Book(String title, String author, LocalDate year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", year=" + year +
+                '}';
     }
 }
 
